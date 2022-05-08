@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.table {
+	/* padding-left: 152px;
+	padding-top: 100px;
+	width: 1086px;
+	height: 780px; */
+	max-width: 100%;
+}
+
+.headpart{
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+}
+.usermanagment{
+     /* width: 40px; */
+     font-size: larger;
+    height: 40px;
+}
+.table tbody tr {
+	text-align: left;
+}
+.table th {
+	text-align: left;
+}
+.table tbody .pinktr {
+	color: #FF2288;
+}
+.table th,
+.table td {
+	padding: 0.5rem;
+	vertical-align: auto;
+	border-top: 1px solid #1b1a1a6e;
+}
+.table thead th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #FFFFFF;
+}
+.table tbody+tbody {
+	border-top: 2px solid #FFFFFF;
+}
+.table .table {
+	background-color: #FFFFFF;
+}
+.table-sm th,
+.table-sm td {
+	padding: 1rem;
+}
+.table-bordered th,
+.table-bordered td {
+	border: 1px solid #eceeef;
+}
+.table-bordered thead th,
+.table-bordered thead td {
+	border-bottom-width: 2px;
+}
+.table tr:hover {
+	background-color: gray;
+	transition: width 1s, background-color 3s, transform 1.5s;
+}
+
+
+
+
+
+#user-login-form {
+    padding: 30px;
+}
+
+.form-field {
+    margin: 15px;
+
+}
+
+.form-field input {
+    height: 32px;
+    outline: none;
+    border: 1px solid #e3e3e3;
+}
+button {
+    padding: 6px 20px;
+    margin-left: 15px;
+}
