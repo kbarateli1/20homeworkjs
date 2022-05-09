@@ -21,9 +21,6 @@
 
 
 
-
-
-
 const signupForm = document.querySelector('#user-signup-form');
 // const username = document.querySelector('#username');
 const email = document.querySelector('#email');
@@ -69,7 +66,8 @@ function userActions(){
   // 1. ცხრილში ღილაკებზე უნდა მიამაგროთ event listener-ები
   // 2. იქნება 2 ღილაკი რედაქტირება და წაშლა როგორც "ცხრილი.png" ში ჩანს
   // 3. id შეინახეთ data-user-id ატრიბუტად ღილაკებზე
-  // 4. წაშლა ღილაკზე დაჭერისას უნდა გაიგზავნოს წაშლის მოთხოვნა (deleteUser ფუნქციის მეშვეობით) სერვერზე და გადაეცეს id
+  // 4. წაშლა ღილაკზე დაჭერისას უნდა გაიგზავნოს წაშლის მოთხოვნა (deleteUser ფუნქციის მეშვეობით) 
+  // სერვერზე და გადაეცეს id
   // 5. ეიდტის ღილაკზე უნდა გაიხსნას მოდალი სადაც ფორმი იქნება იმ მონაცემებით შევსებული რომელზეც მოხდა კლიკი
   // ეიდტის ღილაკზე უნდა გამოიძახოთ getUser ფუნქცია და რომ დააბრუნებს ერთი მომხმარებლის დატას (ობიექტს და არა მასივს)
   // ეს დატა უნდა შეივსოს ფორმში
@@ -126,12 +124,26 @@ async function deleteUser(userId) {
 
 
 
+//open modal
 
+ const modalOpenBtn = document.querySelector('#open-modal');
+ modalOpenBtn.addEventListener('click', () => {
+   openModal('.my-modal');
+ })
 
+ function openModal(modalSelector){
+   const modalNode = document.querySelector(modalSelector);
+   modalNode.classList.add('visible');
+   const modalCloseBtn = modalNode.querySelector('.modal-close');
+   modalCloseBtn.addEventListener('click', () => {
+     closeModal(modalSelector)
+   })
+ }
 
-
-
-
+ function closeModal(modalSelector){
+   const modalNode = document.querySelector(modalSelector);
+   modalNode.classList.remove('visible');
+ }
 
 
 

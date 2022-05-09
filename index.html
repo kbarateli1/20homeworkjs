@@ -13,7 +13,7 @@
 
             <div class="headpart">
                 <p class="usermanagment">User Managment</p>
-                <button class="new user">New USer</button>
+                <button id="open-modal" type="button">New User</button>
             </div>
         <tr>
             <th  scope="ID">ID</th>
@@ -40,7 +40,7 @@
             <td>
                 <button class="EDIT">Edit</button>
                 <button class="Delete">Delete</button>
-
+                
             </td>
         </tr>
 
@@ -51,66 +51,61 @@
 </table>
 
 
-
-
-
-
-
-
-
-
-
-
-
-<div class="modal-body">
-
-     <form id="user-signup-form" action="/save-user" method="post" novalidate>
-        <input id="user_id" type="hidden" placeholder="">
-        <div class="form-field">
-            <label for="first_name">Enter First Name</label>
-            <input id="first_name" type="text" placeholder="First Name" required minlength="4">
-            <span class="field-error" id="first_name-error"></span>
+<div class="modal my-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                User registration form
+                <button class="modal-close">X</button>
+            </div>
+            <div class="modal-body">
+                <form id="user-signup-form" action="/save-user" method="post" novalidate>
+                    <input id="user_id" type="hidden" placeholder="">
+                    <div class="form-field">
+                        <label for="first_name">Enter First Name</label>
+                        <input id="first_name" type="text" placeholder="First Name" required minlength="4">
+                        <span class="field-error" id="first_name-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="last_name">Enter Last name</label>
+                        <input id="last_name" type="text" placeholder="Last name" required>
+                        <span class="field-error" id="last_name-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="zip">Enter Zip</label>
+                        <input id="zip" type="text" placeholder="Zip" required>
+                        <span class="field-error" id="zip-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="personal_number">personal_number</label>
+                        <input id="personal_number" type="number" placeholder="personal_number" required>
+                        <span class="field-error" id="personal_number-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="mobile_number">mobile_number</label>
+                        <input id="mobile_number" type="number" placeholder="mobile_number" required>
+                        <span class="field-error" id="mobile_number-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="gender">Enter gender</label>
+                        <input id="gender" type="text" placeholder="gender" required>
+                        <span class="field-error" id="gender-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Enter Email</label>
+                        <input id="email" type="email" placeholder="email" required>
+                        <span class="field-error" id="email-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="status">Enter status</label>
+                        <input id="status" type="text" placeholder="status" required>
+                        <span class="field-error" id="status-error"></span>
+                    </div>
+                
+                    <button type="submit">Save</button>
+                </form>
         </div>
-        <div class="form-field">
-            <label for="last_name">Enter Last name</label>
-            <input id="last_name" type="text" placeholder="Last name" required>
-            <span class="field-error" id="last_name-error"></span>
-        </div>
-        <div class="form-field">
-            <label for="zip">Enter Zip</label>
-            <input id="zip" type="text" placeholder="Zip" required>
-            <span class="field-error" id="zip-error"></span>
-        </div>
-        <div class="form-field">
-            <label for="personal_number">personal_number</label>
-            <input id="personal_number" type="number" placeholder="personal_number" required>
-            <span class="field-error" id="personal_number-error"></span>
-        </div>
-        <div class="form-field">
-            <label for="mobile_number">mobile_number</label>
-            <input id="mobile_number" type="number" placeholder="mobile_number" required>
-            <span class="field-error" id="mobile_number-error"></span>
-        </div>
-        <div class="form-field">
-            <label for="gender">Enter gender</label>
-            <input id="gender" type="text" placeholder="gender" required>
-            <span class="field-error" id="gender-error"></span>
-        </div>
-        <div class="form-field">
-            <label for="email">Enter Email</label>
-            <input id="email" type="email" placeholder="email" required>
-            <span class="field-error" id="email-error"></span>
-        </div>
-        <div class="form-field">
-            <label for="status">Enter status</label>
-            <input id="status" type="text" placeholder="status" required>
-            <span class="field-error" id="status-error"></span>
-        </div>
-    
-        <button type="submit">Save</button>
-    </form>
+    </div>  
 </div>
-
 
     <script src="script.js"></script>
 </body>

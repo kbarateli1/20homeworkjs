@@ -89,3 +89,31 @@ button {
     padding: 6px 20px;
     margin-left: 15px;
 }
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .2);
+    padding-top: 50px;
+}
+.modal.visible {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.modal-content {
+    width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.modal-header {
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+}
