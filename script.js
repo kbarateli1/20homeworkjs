@@ -19,7 +19,7 @@
 
 
 
-
+//ჩამოვრჩი და კარგად ვერ გავიაზრე აშკარად ეს ნაწილი
 
 const signupForm = document.querySelector('#user-signup-form');
 // const username = document.querySelector('#username');
